@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#f5f5f5" rx="100"/>
+  
+  <!-- Wave -->
+  <path d="M 300 600 Q 350 500 400 550 T 500 450 T 600 550 T 700 400" stroke="#1a5f7a" stroke-width="60" fill="none" stroke-linecap="round"/>
+  <path d="M 280 650 Q 330 550 380 600 T 480 500 T 580 600 T 680 450" stroke="#2a8fa3" stroke-width="50" fill="none" stroke-linecap="round"/>
+  <path d="M 260 700 Q 310 600 360 650 T 460 550 T 560 650 T 660 500" stroke="#3db5cc" stroke-width="40" fill="none" stroke-linecap="round"/>
+  
+  <!-- Basketball hoop -->
+  <circle cx="550" cy="450" r="80" fill="none" stroke="#1a5f7a" stroke-width="15"/>
+  <line x1="470" y1="450" x2="630" y2="450" stroke="#1a5f7a" stroke-width="12"/>
+  <path d="M 480 460 Q 550 520 620 460" stroke="#f5a623" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Basketball -->
+  <circle cx="550" cy="350" r="60" fill="none" stroke="#f5a623" stroke-width="10"/>
+  <line x1="550" y1="290" x2="550" y2="410" stroke="#f5a623" stroke-width="8"/>
+  <path d="M 510 350 Q 550 330 590 350" stroke="#f5a623" stroke-width="8" fill="none"/>
+  
+  <!-- Text -->
+  <text x="512" y="800" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#2a8fa3">MALIBU</text>
+  <text x="512" y="920" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="#f5a623">CREW NEWS</text>
+</svg>

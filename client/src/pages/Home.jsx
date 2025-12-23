@@ -6,10 +6,10 @@ export default function Home({ user, token, apiUrl }) {
   return (
     <div className="home">
       <div className="home-grid">
-        <div className="news-section">
+        <div className="main-content">
           <RecentNews apiUrl={apiUrl} />
         </div>
-        <div className="comments-section">
+        <div className="sidebar">
           <FanComments user={user} token={token} apiUrl={apiUrl} />
         </div>
       </div>

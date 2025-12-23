@@ -18,7 +18,7 @@ export default function RecentNews({ apiUrl }) {
     };
 
     fetchNews();
-    const interval = setInterval(fetchNews, 5000); // Poll every 5 seconds
+    const interval = setInterval(fetchNews, 5000);
     return () => clearInterval(interval);
   }, [apiUrl]);
 
@@ -26,20 +26,39 @@ export default function RecentNews({ apiUrl }) {
 
   return (
     <div className="recent-news">
-      <h2>📰 Recent News</h2>
       <div className="news-list">
         {news.length === 0 ? (
           <p className="no-data">No news yet</p>
         ) : (
           news.map((item) => (
-            <div key={item.id} className="news-item">
-              {item.image_url && <img src={item.image_url} alt={item.title} />}
-              <div className="news-content">
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-                <small>{new Date(item.created_at).toLocaleString()}</small>
+            <article key={item.id} className="news-article">
+              {item.image_url && (
+                <div className="article-image">
+                  <img src={item.image_url} alt={item.title} />
+                </div>
+              )}
+              <div className="article-content">
+                <h3 className="article-title">{item.title}</h3>
+                <div className="article-meta">
+                  <span className="article-date">
+                    {new Date(item.created_at).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </span>
+                </div>
+                <p className="article-excerpt">{item.excerpt || item.content.substring(0, 150)}</p>
+                <a 
+                  href={item.article_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="read-more"
+                >
+                  Read More →
+                </a>
               </div>
-            </div>
+            </article>
           ))
         )}
       </div>
