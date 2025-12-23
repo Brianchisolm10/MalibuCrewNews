@@ -7,7 +7,7 @@ export default function Home({ user, token, apiUrl }) {
     <div className="home">
       <div className="home-grid">
         <div className="main-content">
-          <RecentNews apiUrl={apiUrl} />
+          <RecentNews apiUrl={apiUrl} currentUser={user} />
         </div>
         <div className="sidebar">
           <FanComments user={user} token={token} apiUrl={apiUrl} />
